@@ -3383,7 +3383,7 @@ AudioSource:
   m_GameObject: {fileID: 1524062052}
   m_Enabled: 0
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4a8f3ca4a35a11a46885ec54a8c2ff7b, type: 2}
   m_audioClip: {fileID: 8300000, guid: cb6c2d8b0c616344abcfdb87d53e7bdf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
@@ -4153,6 +4153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905462933}
   - component: {fileID: 1905462934}
+  - component: {fileID: 1905462935}
   m_Layer: 5
   m_Name: volume
   m_TagString: Untagged
@@ -4227,13 +4228,38 @@ MonoBehaviour:
   m_FillRect: {fileID: 1409371135}
   m_HandleRect: {fileID: 279004628}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1905462935}
+        m_TargetAssemblyTypeName: audioController, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1905462935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905462932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3bb6acf9f3c134aa42dcc51e56d866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 4a8f3ca4a35a11a46885ec54a8c2ff7b, type: 2}
 --- !u!1 &1970458741
 GameObject:
   m_ObjectHideFlags: 0
